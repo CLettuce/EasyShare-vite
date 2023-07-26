@@ -1,3 +1,4 @@
+import React from 'react'
 import { Routes, Route } from "react-router-dom";
 import { Home } from "./components/Home";
 import { Login } from "./components/Login";
@@ -5,6 +6,8 @@ import { ProtectedRoute } from "./components/ProtectedRoute";
 import { Register } from "./components/Register";
 import { AuthProvider } from "./context/authContext";
 import './BackFondo.css';
+import Navbar from './components/navbar';
+
 
 function App() {
   return(
@@ -14,7 +17,7 @@ function App() {
           <Route path="/" element=
           {
             <ProtectedRoute>
-              <Home/>
+              <Navbar/>
             </ProtectedRoute>
           }
           />
