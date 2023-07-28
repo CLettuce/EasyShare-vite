@@ -91,7 +91,8 @@ export function Register() {
         </div>
       </form>
       <p className="my-4 text-sm flex justify-between px-3">
-        Regresar al Login<Link to='/Login'>Click Aquí</Link>
+
+
       </p>
     </div>
   )

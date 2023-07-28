@@ -3,6 +3,7 @@ import {useAuth} from "../context/authContext"
 import { useNavigate } from "react-router-dom";
 import { Alert } from "./Alert";
 import logo from './logo.jpg';
+import Navbar from "./navbar";
 
 export function Login() {
   
@@ -53,8 +54,10 @@ export function Login() {
     
   }
   return (
+
+    
       <div className="w-full max-w-xs m-auto">
-        
+        <Navbar/>
 
 
         {/* <div className="mb-6 text-center font-roboto text-white font-bold">
@@ -71,8 +74,8 @@ export function Login() {
         {/* <form className="bg-gray-600 shadow-md rounded px-8 pt-6 pb-8 mb-4 w-96">
           Motor de Unificacion de persona biometricas
         </form> */}
-        <div className="text-center text-[50px] font-roboto font-extrabold text-gray-700 mb-16 ">
-            EasyShare
+        <div className="text-center text-[50px] font-roboto font-extrabold text-white mb-16 ">
+            Easy Share
         </div>
           {error && <Alert message={error}/>}
           <form onSubmit={handleSubmit} className="bg-white shadow-md rounded

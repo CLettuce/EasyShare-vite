@@ -14,7 +14,7 @@ function App() {
     <div className="BackFondo h-screen text-black flex">
       <AuthProvider>
         <Routes>
-          <Route path="/" element=
+          <Route path="/Login" element=
           {
             <ProtectedRoute>
               <Navbar/>
@@ -23,6 +23,7 @@ function App() {
           />
           <Route  path="/Login" element={<Login/>}/>
           <Route path="/Register" element={<Register/>}/>
+          <Route path="/Navbar" element={<Home/>}/>
         </Routes>
       </AuthProvider>
     </div>

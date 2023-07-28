@@ -1,44 +1,34 @@
 import React, {useState} from "react";
-import "../navbar.css";
+import BtnLogout from "./BtnLogout";
 
-function Navbar() {
-  const[active, setActive] = useState("nav__menu");
-  const[toggleIcon, setToggleIcon] = useState("nav__toggler");
-  const navToggle = () => {
-    active === 'nav__menu' 
-    ? setActive("nav__menu nav__active")
-    : setActive("nav__menu");
-    //animacion 
-    toggleIcon === 'nav__toggler'
-    ? setToggleIcon ("nav__toggler toggle")
-    : setToggleIcon ("nav__toggler")
-  };
-  return (
-    <div>
-      <nav className="nav">
-        <a href="#" className="brand">
-          EasyShare
-        </a>
-        <ul className={active}>
-          <il className="nav__item">
-            <a href="#" className="nav__link">
-              Home
-            </a>
-          </il>
-          <il className="nav__item">
-            <a href="#" className="nav__link">
-              Acerca de
-            </a>
-          </il>
-        </ul>
-        <div onClick={navToggle} className={toggleIcon}>
-          <div className="line1"></div>
-          <div className="line2"></div>
-          <div className="line3"></div>
 
+const Navbar = () => {
+  let Links=[
+    {name:"HOME", link:"/"},
+    {name:"ACERCADE", link:"/"},
+  ];
+  return(
+    <div className='shadow-md w-full fixed top-0 left-0'>
+      <div className='md:flex items-center justify-between bg-white py-4 md:px-10 px-7'>
+        <div className='font-bold text-2xl cursor-pointer flex items-center font-Roboto
+        text-gray-800'>
+            <span className="text-3xl text-indigo-600 mr-1 pt-2"></span>
+            Easy Share
         </div>
-      </nav>
+        <ul className="md:flex md:items-center">
+          {
+            Links.map((link) =>(
+              <li key={link.name} className="md:ml-8 text-xl">
+                <a href={link.link} className="text-grey-800 hover:text-gray-400 duration-500" >{link.name}</a>
+                
+              </li>
+            ))
+          }
+          <BtnLogout>Salir</BtnLogout>
+        </ul>
+      </div>
     </div>
-  );
+
+  )
 }
 export default Navbar;
