@@ -83,16 +83,14 @@ export function Register() {
             py-2 px-4 text-sm rounded rounded focus:outline-none focus:shadow-outline"
             >Registrar</button>
 
-            <a href="!#" className="inline-block align-baseline font-blod 
-            text-sm text-blue-500 hover:text-blue-800">Restablecer Contraseña</a>
+            
           </div>
           
 
         </div>
       </form>
-      <p className="my-4 text-sm flex justify-between px-3">
-
-
+      <p className="my-4 text-sm flex text-white justify-between px-3">
+        Regresar al Login<Link to='/Login' className="text-blue-600">Click Aquí</Link>
       </p>
     </div>
   )
