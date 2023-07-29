@@ -23,7 +23,7 @@ function App() {
           />
           <Route  path="/Login" element={<Login/>}/>
           <Route path="/Register" element={<Register/>}/>
-          <Route path="/Navbar" element={<Home/>}/>
+          <Route path="/Home" element={<Home/>}/>
         </Routes>
       </AuthProvider>
     </div>
