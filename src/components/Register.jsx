@@ -85,8 +85,6 @@ export function Register() {
 
             
           </div>
-          
-
         </div>
       </form>
       <p className="my-4 text-sm flex text-white justify-between px-3">
