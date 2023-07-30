@@ -7,6 +7,9 @@ import { Register } from "./components/Register";
 import { AuthProvider } from "./context/authContext";
 import './BackFondo.css';
 import Navbar from './components/navbar';
+import { CrearSala } from './components/CrearSala';
+import { UnirseSala } from './components/UnirseSala';
+import { SalaCreada } from './components/SalaCreada';
 
 
 function App() {
@@ -21,9 +24,31 @@ function App() {
             </ProtectedRoute>
           }
           />
+          <Route path="/CrearSala" element=
+          {
+            <ProtectedRoute>
+              <CrearSala/>
+            </ProtectedRoute>
+          }
+          />
+          <Route path="/UnirseSala" element=
+          {
+            <ProtectedRoute>
+              <UnirseSala/>
+            </ProtectedRoute>
+          }
+          />
+          <Route path="/SalaCreada" element=
+          {
+            <ProtectedRoute>
+              <SalaCreada/>
+            </ProtectedRoute>
+          }
+          />
+          
           <Route  path="/Login" element={<Login/>}/>
           <Route path="/Register" element={<Register/>}/>
-          <Route path="/Home" element={<Navbar/>}/>
+          <Route path="/Navbar" element={<Navbar/>}/>
         </Routes>
       </AuthProvider>
     </div>
