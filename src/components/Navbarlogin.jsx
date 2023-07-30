@@ -1,11 +1,8 @@
 import React, {useState} from "react";
-import BtnLogout from "./BtnLogout";
 
-
-const Navbar = () => {
+const Navbarlogin = () => {
   let Links=[
-    {name:"HOME", link:"/"},
-    {name:"ACERCADE", link:"/"},
+    {name:"Registrase", link:"/Register"},
   ];
   let [open, setOpen]=useState(false);
   return(
@@ -30,17 +27,17 @@ const Navbar = () => {
             Links.map((link) =>(
               <li key={link.name} className="md:ml-8 text-xl md:my-0
               my-7">
-                <a href={link.link} className="text-grey-800 hover:text-gray-400 
-                duration-500" >{link.name}</a>
+                <a href={link.link} className="bg-indigo-600 text-white font-bold font-roboto py-2 
+                px-6 rounded md:ml-8 hover:bg-indigo-400 duration-500" >{link.name}</a>
                 
               </li>
             ))
           }
-          <BtnLogout>Salir</BtnLogout>
+          
         </ul>
       </div>
     </div>
 
   )
 }
-export default Navbar;
+export default Navbarlogin;

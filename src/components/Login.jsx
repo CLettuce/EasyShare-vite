@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { Alert } from "./Alert";
 import logo from './logo.jpg';
 import Navbar from "./navbar";
+import Navbarlogin from "./Navbarlogin";
 
 export function Login() {
   
@@ -57,7 +58,7 @@ export function Login() {
 
     
       <div className="w-full max-w-xs m-auto">
-        <Navbar/>
+       <Navbarlogin/>
 
 
         {/* <div className="mb-6 text-center font-roboto text-white font-bold">
