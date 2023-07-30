@@ -17,13 +17,13 @@ function App() {
           <Route path="/" element=
           {
             <ProtectedRoute>
-              <Navbar/>
+              <Home/>
             </ProtectedRoute>
           }
           />
           <Route  path="/Login" element={<Login/>}/>
           <Route path="/Register" element={<Register/>}/>
-          <Route path="/Home" element={<Home/>}/>
+          <Route path="/Home" element={<Navbar/>}/>
         </Routes>
       </AuthProvider>
     </div>

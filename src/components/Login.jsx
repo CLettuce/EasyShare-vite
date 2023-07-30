@@ -12,7 +12,7 @@ export function Login() {
     email: "",
     password: "",
   });
-  const {login, loginWithGoogle} = useAuth ();
+  const {login, loginWithGoogle, resetPassword} = useAuth ();
   const navigate = useNavigate();
   const [error, setErrror] = useState();
   // cargar o actualizar el dato
@@ -54,6 +54,15 @@ export function Login() {
     }
     
   }
+  const handleResetPassword = async () => {
+    if(!user.email) return setErrror("Por favor ingresa tu email.");
+    try {
+      await resetPassword(user.email);
+      setErrror("Revisa el buzón de tu correo para restablecer la contraseña")
+    } catch (error) {
+      setErrror(error.message);
+    }
+  }
   return (
 
     
@@ -79,8 +88,8 @@ export function Login() {
             Easy Share
         </div>
           {error && <Alert message={error}/>}
-          <form onSubmit={handleSubmit} className="bg-white shadow-md rounded
-      px-8 pt-6 pb-8 mb-4">
+      <form onSubmit={handleSubmit} className="bg-white shadow-md rounded
+        px-8 pt-6 pb-8 mb-4">
         <div className="mb-4">
           <label htmlFor="email" className="block text-gray-700 text-sm 
           font-fold mb-2">Email</label>
@@ -111,10 +120,10 @@ export function Login() {
           <div className="flex items-center justify-between">
             <button className="bg-blue-400 hover:bg-blue-600 text-white font-bold
             py-2 px-4 text-sm rounded rounded focus:outline-none focus:shadow-outline"
-            >Registrar</button>
+            >Ingresar</button>
 
-            <a href="!#" className="inline-block align-baseline font-blod 
-            text-sm text-blue-500 hover:text-blue-800">Restablecer Contraseña</a>
+            <a href="#" className="inline-block align-baseline font-blod 
+            text-sm text-blue-500 hover:text-blue-800 " onClick={handleResetPassword}>Restablecer Contraseña</a>
           </div>
           
 
