@@ -84,7 +84,7 @@ export function Login() {
         {/* <form className="bg-gray-600 shadow-md rounded px-8 pt-6 pb-8 mb-4 w-96">
           Motor de Unificacion de persona biometricas
         </form> */}
-        <div className="text-center text-[50px] font-roboto font-extrabold text-white mb-16 ">
+        <div className="text-center text-[50px] font-roboto font-extrabold text-black mb-16 ">
             Easy Share
         </div>
           {error && <Alert message={error}/>}
