@@ -30,7 +30,7 @@ export function SalaCreada() {
   }, []);
 
   return (
-    <div >
+    <div className="">
       {/*Prueba de subida de archivo sin estilo  */}
 
       <input type="file" onChange={(event) => {
